@@ -45,7 +45,7 @@
         NSURL *secScopedUrl = [VASandboxFileAccess sandboxFileHandle:path forced:NO];
         [VASandboxFileAccess startAccessingSecurityScopedResource:secScopedUrl];
         if ([[NSFileManager defaultManager] isReadableFileAtPath:[secScopedUrl path]]){
-            //NSLog(@"%@ readable",path);
+            NSLog(@"%@ readable",path);
         }else {
             NSLog(@"Access denied to %@ %@",[secScopedUrl path],[secScopedUrl query]);        
         }    
@@ -61,7 +61,7 @@
     for (NSString *key in dict) {
         [secure addObject:key];
     }    
-    NSLog(@"eneded with bookmarks %@",secure);    
+    NSLog(@"ended with bookmarks %@",secure);    
 }
 
 - (void) application:(NSApplication *)app willEncodeRestorableState:(NSCoder *)coder

@@ -13,8 +13,8 @@
 		4A4851F514F97DBF0088C063 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4A4851F314F97DBF0088C063 /* Credits.rtf */; };
 		4A4851F814F97DBF0088C063 /* VASandboxFileAccessAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4851F714F97DBF0088C063 /* VASandboxFileAccessAppDelegate.m */; };
 		4A4851FB14F97DC00088C063 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4851F914F97DC00088C063 /* MainMenu.xib */; };
-		4A48520414F97F020088C063 /* VASandboxFileAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48520114F97DD10088C063 /* VASandboxFileAccess.m */; };
 		4A48521F14F996330088C063 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4A48521E14F996330088C063 /* LICENSE */; };
+		4A637B0B14F99BD000E87EF3 /* VASandboxFileAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A637B0A14F99BD000E87EF3 /* VASandboxFileAccess.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +31,11 @@
 		4A4851F614F97DBF0088C063 /* VASandboxFileAccessAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VASandboxFileAccessAppDelegate.h; sourceTree = "<group>"; };
 		4A4851F714F97DBF0088C063 /* VASandboxFileAccessAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VASandboxFileAccessAppDelegate.m; sourceTree = "<group>"; };
 		4A4851FA14F97DC00088C063 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		4A48520114F97DD10088C063 /* VASandboxFileAccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = VASandboxFileAccess.m; path = ../../../VASandboxFileAccess.m; sourceTree = "<group>"; };
-		4A48520214F97DD10088C063 /* VASandboxFileAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VASandboxFileAccess.h; path = ../../../VASandboxFileAccess.h; sourceTree = "<group>"; };
 		4A48520314F97DD20088C063 /* VASandboxFileAccessExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VASandboxFileAccessExample.entitlements; sourceTree = "<group>"; };
 		4A48521E14F996330088C063 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		4A637B0914F99BD000E87EF3 /* VASandboxFileAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VASandboxFileAccess.h; sourceTree = SOURCE_ROOT; };
+		4A637B0A14F99BD000E87EF3 /* VASandboxFileAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VASandboxFileAccess.m; sourceTree = SOURCE_ROOT; };
+		4AA7C56414F99E3200EE5E8F /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +89,13 @@
 		4A4851EA14F97DBF0088C063 /* VASandboxFileAccessExample */ = {
 			isa = PBXGroup;
 			children = (
+				4A637B0914F99BD000E87EF3 /* VASandboxFileAccess.h */,
+				4A637B0A14F99BD000E87EF3 /* VASandboxFileAccess.m */,
 				4A48520314F97DD20088C063 /* VASandboxFileAccessExample.entitlements */,
-				4A48520214F97DD10088C063 /* VASandboxFileAccess.h */,
-				4A48520114F97DD10088C063 /* VASandboxFileAccess.m */,
 				4A4851F614F97DBF0088C063 /* VASandboxFileAccessAppDelegate.h */,
 				4A4851F714F97DBF0088C063 /* VASandboxFileAccessAppDelegate.m */,
 				4A4851F914F97DC00088C063 /* MainMenu.xib */,
+				4AA7C56414F99E3200EE5E8F /* README */,
 				4A48521E14F996330088C063 /* LICENSE */,
 				4A4851EB14F97DBF0088C063 /* Supporting Files */,
 			);
@@ -178,9 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A48520414F97F020088C063 /* VASandboxFileAccess.m in Sources */,
 				4A4851F114F97DBF0088C063 /* main.m in Sources */,
 				4A4851F814F97DBF0088C063 /* VASandboxFileAccessAppDelegate.m in Sources */,
+				4A637B0B14F99BD000E87EF3 /* VASandboxFileAccess.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +306,7 @@
 				4A48520014F97DC00088C063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
