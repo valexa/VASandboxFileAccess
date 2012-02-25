@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A4851E514F97DBF0088C063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4851E414F97DBF0088C063 /* Cocoa.framework */; };
+		4A4851EF14F97DBF0088C063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A4851ED14F97DBF0088C063 /* InfoPlist.strings */; };
+		4A4851F114F97DBF0088C063 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4851F014F97DBF0088C063 /* main.m */; };
+		4A4851F514F97DBF0088C063 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4A4851F314F97DBF0088C063 /* Credits.rtf */; };
+		4A4851F814F97DBF0088C063 /* VASandboxFileAccessAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4851F714F97DBF0088C063 /* VASandboxFileAccessAppDelegate.m */; };
+		4A4851FB14F97DC00088C063 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4851F914F97DC00088C063 /* MainMenu.xib */; };
+		4A48520414F97F020088C063 /* VASandboxFileAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48520114F97DD10088C063 /* VASandboxFileAccess.m */; };
+		4A48521F14F996330088C063 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4A48521E14F996330088C063 /* LICENSE */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4A4851E014F97DBF0088C063 /* VASandboxFileAccessExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VASandboxFileAccessExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A4851E414F97DBF0088C063 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4A4851E714F97DBF0088C063 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4A4851E814F97DBF0088C063 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4A4851E914F97DBF0088C063 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4A4851EC14F97DBF0088C063 /* VASandboxFileAccessExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VASandboxFileAccessExample-Info.plist"; sourceTree = "<group>"; };
+		4A4851EE14F97DBF0088C063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A4851F014F97DBF0088C063 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4A4851F214F97DBF0088C063 /* VASandboxFileAccessExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VASandboxFileAccessExample-Prefix.pch"; sourceTree = "<group>"; };
+		4A4851F414F97DBF0088C063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4A4851F614F97DBF0088C063 /* VASandboxFileAccessAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VASandboxFileAccessAppDelegate.h; sourceTree = "<group>"; };
+		4A4851F714F97DBF0088C063 /* VASandboxFileAccessAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VASandboxFileAccessAppDelegate.m; sourceTree = "<group>"; };
+		4A4851FA14F97DC00088C063 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4A48520114F97DD10088C063 /* VASandboxFileAccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = VASandboxFileAccess.m; path = ../../../VASandboxFileAccess.m; sourceTree = "<group>"; };
+		4A48520214F97DD10088C063 /* VASandboxFileAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VASandboxFileAccess.h; path = ../../../VASandboxFileAccess.h; sourceTree = "<group>"; };
+		4A48520314F97DD20088C063 /* VASandboxFileAccessExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VASandboxFileAccessExample.entitlements; sourceTree = "<group>"; };
+		4A48521E14F996330088C063 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A4851DD14F97DBF0088C063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A4851E514F97DBF0088C063 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A4851D514F97DBF0088C063 = {
+			isa = PBXGroup;
+			children = (
+				4A4851EA14F97DBF0088C063 /* VASandboxFileAccessExample */,
+				4A4851E314F97DBF0088C063 /* Frameworks */,
+				4A4851E114F97DBF0088C063 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A4851E114F97DBF0088C063 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A4851E014F97DBF0088C063 /* VASandboxFileAccessExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A4851E314F97DBF0088C063 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A4851E414F97DBF0088C063 /* Cocoa.framework */,
+				4A4851E614F97DBF0088C063 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A4851E614F97DBF0088C063 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A4851E714F97DBF0088C063 /* AppKit.framework */,
+				4A4851E814F97DBF0088C063 /* CoreData.framework */,
+				4A4851E914F97DBF0088C063 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4A4851EA14F97DBF0088C063 /* VASandboxFileAccessExample */ = {
+			isa = PBXGroup;
+			children = (
+				4A48520314F97DD20088C063 /* VASandboxFileAccessExample.entitlements */,
+				4A48520214F97DD10088C063 /* VASandboxFileAccess.h */,
+				4A48520114F97DD10088C063 /* VASandboxFileAccess.m */,
+				4A4851F614F97DBF0088C063 /* VASandboxFileAccessAppDelegate.h */,
+				4A4851F714F97DBF0088C063 /* VASandboxFileAccessAppDelegate.m */,
+				4A4851F914F97DC00088C063 /* MainMenu.xib */,
+				4A48521E14F996330088C063 /* LICENSE */,
+				4A4851EB14F97DBF0088C063 /* Supporting Files */,
+			);
+			path = VASandboxFileAccessExample;
+			sourceTree = "<group>";
+		};
+		4A4851EB14F97DBF0088C063 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A4851EC14F97DBF0088C063 /* VASandboxFileAccessExample-Info.plist */,
+				4A4851ED14F97DBF0088C063 /* InfoPlist.strings */,
+				4A4851F014F97DBF0088C063 /* main.m */,
+				4A4851F214F97DBF0088C063 /* VASandboxFileAccessExample-Prefix.pch */,
+				4A4851F314F97DBF0088C063 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A4851DF14F97DBF0088C063 /* VASandboxFileAccessExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A4851FE14F97DC00088C063 /* Build configuration list for PBXNativeTarget "VASandboxFileAccessExample" */;
+			buildPhases = (
+				4A4851DC14F97DBF0088C063 /* Sources */,
+				4A4851DD14F97DBF0088C063 /* Frameworks */,
+				4A4851DE14F97DBF0088C063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VASandboxFileAccessExample;
+			productName = VASandboxFileAccessExample;
+			productReference = 4A4851E014F97DBF0088C063 /* VASandboxFileAccessExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A4851D714F97DBF0088C063 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VASandboxFileAccess;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Next Design";
+			};
+			buildConfigurationList = 4A4851DA14F97DBF0088C063 /* Build configuration list for PBXProject "VASandboxFileAccessExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4A4851D514F97DBF0088C063;
+			productRefGroup = 4A4851E114F97DBF0088C063 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A4851DF14F97DBF0088C063 /* VASandboxFileAccessExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A4851DE14F97DBF0088C063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A4851EF14F97DBF0088C063 /* InfoPlist.strings in Resources */,
+				4A4851F514F97DBF0088C063 /* Credits.rtf in Resources */,
+				4A4851FB14F97DC00088C063 /* MainMenu.xib in Resources */,
+				4A48521F14F996330088C063 /* LICENSE in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A4851DC14F97DBF0088C063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A48520414F97F020088C063 /* VASandboxFileAccess.m in Sources */,
+				4A4851F114F97DBF0088C063 /* main.m in Sources */,
+				4A4851F814F97DBF0088C063 /* VASandboxFileAccessAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4A4851ED14F97DBF0088C063 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A4851EE14F97DBF0088C063 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4A4851F314F97DBF0088C063 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A4851F414F97DBF0088C063 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4A4851F914F97DC00088C063 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A4851FA14F97DC00088C063 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A4851FC14F97DC00088C063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4A4851FD14F97DC00088C063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4A4851FF14F97DC00088C063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VASandboxFileAccessExample/VASandboxFileAccessExample.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VASandboxFileAccessExample/VASandboxFileAccessExample-Prefix.pch";
+				INFOPLIST_FILE = "VASandboxFileAccessExample/VASandboxFileAccessExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4A48520014F97DC00088C063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VASandboxFileAccessExample/VASandboxFileAccessExample.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VASandboxFileAccessExample/VASandboxFileAccessExample-Prefix.pch";
+				INFOPLIST_FILE = "VASandboxFileAccessExample/VASandboxFileAccessExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A4851DA14F97DBF0088C063 /* Build configuration list for PBXProject "VASandboxFileAccessExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A4851FC14F97DC00088C063 /* Debug */,
+				4A4851FD14F97DC00088C063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A4851FE14F97DC00088C063 /* Build configuration list for PBXNativeTarget "VASandboxFileAccessExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A4851FF14F97DC00088C063 /* Debug */,
+				4A48520014F97DC00088C063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A4851D714F97DBF0088C063 /* Project object */;
+}
