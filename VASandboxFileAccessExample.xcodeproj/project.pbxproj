@@ -35,7 +35,7 @@
 		4A48521E14F996330088C063 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		4A637B0914F99BD000E87EF3 /* VASandboxFileAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VASandboxFileAccess.h; sourceTree = SOURCE_ROOT; };
 		4A637B0A14F99BD000E87EF3 /* VASandboxFileAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VASandboxFileAccess.m; sourceTree = SOURCE_ROOT; };
-		4AA7C56414F99E3200EE5E8F /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
+		4AA7C56614F9A2A700EE5E8F /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 				4A4851F614F97DBF0088C063 /* VASandboxFileAccessAppDelegate.h */,
 				4A4851F714F97DBF0088C063 /* VASandboxFileAccessAppDelegate.m */,
 				4A4851F914F97DC00088C063 /* MainMenu.xib */,
-				4AA7C56414F99E3200EE5E8F /* README */,
+				4AA7C56614F9A2A700EE5E8F /* README.markdown */,
 				4A48521E14F996330088C063 /* LICENSE */,
 				4A4851EB14F97DBF0088C063 /* Supporting Files */,
 			);
