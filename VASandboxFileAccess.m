@@ -102,11 +102,13 @@
         NSString *sandboxExpand = [path stringByExpandingTildeInPath];
         NSString *normalExpand = [[@"/Users/" stringByAppendingPathComponent:NSUserName()] stringByAppendingPathComponent:[path stringByReplacingOccurrencesOfString:@"~" withString:@""]];        
         if (![sandboxExpand isEqualToString:normalExpand]) {
-            NSLog(@"Notice : expanded %@ to %@ but the stringByExpandingTildeInPath sandbox expansion is %@",path,normalExpand,sandboxExpand);
-            return normalExpand;
-        }else {
-            return sandboxExpand;
-        }
+            if ([[NSFileManager defaultManager] fileExistsAtPath:sandboxExpand]) {
+                return sandboxExpand;            
+            }else{
+                NSLog(@"Notice : expanded %@ to %@ , the stringByExpandingTildeInPath sandbox expansion is to non-existant %@",path,normalExpand,sandboxExpand);                           
+            }
+        }        
+        return normalExpand;         
     }
     return path;
 }
