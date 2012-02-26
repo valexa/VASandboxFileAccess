@@ -3,7 +3,7 @@ VASandboxFileAccess - by Vlad Alexa
 Introduction
 ------------
 
-VASandboxFileAccess is a two-pronged implementation of file access and persistence with both the 10.7.3 sandboxing api's and the NSApplicationDelegate state restoration api, if permissions are needed for a file it spawns a powerbox open dialog to the user, once permission is aquired a bookmark is saved to provide persistence.
+VASandboxFileAccess is a two-pronged implementation of file access and persistence with both the 10.7.3 sandboxing api's and the NSApplicationDelegate state restoration api, if permissions are needed for a file it spawns a powerbox open dialog to the user, once permission is aquired a bookmark is saved to provide persistence (a secure bookmark is attempted first with the regular one as a fallback).
 
 
 Secure bookmarks
@@ -18,7 +18,7 @@ To use them you would do something like:
         //do your file access here
         [VASandboxFileAccess stopAccessingSecurityScopedResource:secScopedUrl]; 
         
-This same code should is used for regular bookmarks too in which case start and stopAccessing... do nothing, this relies on the implementation detail of secure bookmarks having a non nil query property.
+This same code is used for regular bookmarks too in which case start and stopAccessing... do nothing, this relies on the implementation detail of secure bookmarks having a non nil query property.
 
 
 Regular bookmarks
