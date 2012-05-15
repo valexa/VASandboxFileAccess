@@ -10,8 +10,8 @@
 
 }
 
-+(BOOL)punchHoleInSandboxForPath:(NSString*)path;
-+(NSURL*)sandboxFileHandle:(NSString*)path forced:(BOOL)forced;
++(BOOL)punchHoleInSandboxForPath:(NSString*)path denyNotice:(NSString*)denyNotice;
++(NSURL*)sandboxFileHandle:(NSString*)path forced:(BOOL)forced denyNotice:(NSString*)denyNotice;
 
 +(BOOL)foundBookmarkForPath:(NSString*)path;
 +(NSString*)sandboxExpandTildeInPath:(NSString*)path;

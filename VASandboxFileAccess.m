@@ -9,11 +9,11 @@
 @implementation VASandboxFileAccess
 
 
-+(BOOL)punchHoleInSandboxForPath:(NSString*)path
++(BOOL)punchHoleInSandboxForPath:(NSString*)path denyNotice:(NSString*)denyNotice
 {
     //make sure we have a expanded and resolved path
     path = [[VASandboxFileAccess sandboxExpandTildeInPath:path] stringByResolvingSymlinksInPath];
-    NSString *message = [NSString stringWithFormat:@"Permission required to access: %@",[path lastPathComponent]];
+    NSMutableString *message = [NSMutableString stringWithFormat:@"Permission required to access: %@",[path lastPathComponent]];
     
     NSOpenPanel *openDlg = [NSOpenPanel openPanel];
     [openDlg setPrompt:@"Permit access"];
@@ -25,7 +25,8 @@
     BOOL directory;
     [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&directory];    
 	if (directory) {
-        [openDlg setCanChooseDirectories:YES];        
+        [message appendString:@" folder"];        
+        [openDlg setCanChooseDirectories:YES];  
     }else{
         [openDlg setCanChooseFiles:YES];        
         [openDlg setAllowedFileTypes:[NSArray arrayWithObject:[path pathExtension]]];        
@@ -36,15 +37,18 @@
             return YES;
         }else{
             [[NSAlert alertWithMessageText:@"Wrong file was selected." defaultButton:@"Try Again" alternateButton:nil otherButton:nil informativeTextWithFormat:message] runModal];
-            [VASandboxFileAccess punchHoleInSandboxForPath:path];
+            [VASandboxFileAccess punchHoleInSandboxForPath:path denyNotice:denyNotice];
         }
 	}else{
-        [[NSAlert alertWithMessageText:@"Was denied access to required files." defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"This software can not provide it's full functionality without access to certain files."] runModal];        
+        if (denyNotice) {
+            if ([denyNotice isEqualToString:@""]) denyNotice = @"This software can not provide it's full functionality without access to certain files.";            
+            [[NSAlert alertWithMessageText:@"Was denied access to required files." defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:denyNotice] runModal];                    
+        }
     }   
     return NO;
 }
 
-+(NSURL*)sandboxFileHandle:(NSString*)path forced:(BOOL)forced
++(NSURL*)sandboxFileHandle:(NSString*)path forced:(BOOL)forced denyNotice:(NSString*)denyNotice
 {    
     NSURL *url = [NSURL fileURLWithPath:[[VASandboxFileAccess sandboxExpandTildeInPath:path] stringByResolvingSymlinksInPath]];
     
@@ -65,12 +69,12 @@
         }else {
             if (forced == YES && [VASandboxFileAccess foundBookmarkForPath:path] == YES) return url;            
             //punch hole and save bookmark
-            if ([VASandboxFileAccess punchHoleInSandboxForPath:[url path]]) {
+            if ([VASandboxFileAccess punchHoleInSandboxForPath:[url path] denyNotice:denyNotice]) {
                 if (![VASandboxFileAccess addSecurityBookmark:url]) {
                     [VASandboxFileAccess addRegularBookmark:url];
                 }               
             } else {
-                NSLog(@"Failed to punch hole in sandbox for %@",[url path]);
+                NSLog(@"Was not granted access to %@ in sandbox",[url path]);
             }        
         }
     }    
@@ -193,7 +197,7 @@
     }
     if ([sandboxedEncoded count] > 0) {
         [coder encodeObject:sandboxedEncoded forKey:@"sandboxRegularBookmarks"];
-        NSLog(@"encoded %@",sandboxedEncoded);        
+        //NSLog(@"encoded %@",sandboxedEncoded);        
     }
 }
 
@@ -201,7 +205,7 @@
 {
     NSArray *decoded = [coder decodeObjectForKey:@"sandboxRegularBookmarks"];
     if (decoded) {
-        NSLog(@"decoded %@",decoded);        
+        //NSLog(@"decoded %@",decoded);        
     } 
 }
 

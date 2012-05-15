@@ -42,7 +42,7 @@
                      nil];   
     
     for (NSString *path in list) {
-        NSURL *secScopedUrl = [VASandboxFileAccess sandboxFileHandle:path forced:NO];
+        NSURL *secScopedUrl = [VASandboxFileAccess sandboxFileHandle:path forced:NO denyNotice:@""]; //pass nil for denyNotice to not show any notice at all
         [VASandboxFileAccess startAccessingSecurityScopedResource:secScopedUrl];
         if ([[NSFileManager defaultManager] isReadableFileAtPath:[secScopedUrl path]]){
             NSLog(@"%@ readable",path);

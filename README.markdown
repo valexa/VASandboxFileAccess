@@ -13,7 +13,7 @@ Secure bookmarks refer to the bookmarks created with the NSURLBookmarkCreationWi
 
 To use them you would do something like:
 
-        NSURL *secScopedUrl = [VASandboxFileAccess sandboxFileHandle:path forced:NO];
+        NSURL *secScopedUrl = [VASandboxFileAccess sandboxFileHandle:path forced:NO denyNotice:nil];
         [VASandboxFileAccess startAccessingSecurityScopedResource:secScopedUrl];
         //do your file access here
         [VASandboxFileAccess stopAccessingSecurityScopedResource:secScopedUrl]; 
